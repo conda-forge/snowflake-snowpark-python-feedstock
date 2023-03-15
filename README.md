@@ -1,11 +1,11 @@
-About snowflake-snowpark-python
-===============================
+About snowflake-snowpark-python-feedstock
+=========================================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/snowflake-snowpark-python-feedstock/blob/main/LICENSE.txt)
 
 Home: https://www.snowflake.com/
 
 Package license: Apache-2.0
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/snowflake-snowpark-python-feedstock/blob/main/LICENSE.txt)
 
 Summary: Snowflake Snowpark for Python
 
@@ -145,5 +145,7 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@sfc-gh-achandrasekaran](https://github.com/sfc-gh-achandrasekaran/)
 * [@sfc-gh-mkeller](https://github.com/sfc-gh-mkeller/)
+* [@sfc-gh-yixie](https://github.com/sfc-gh-yixie/)
 
