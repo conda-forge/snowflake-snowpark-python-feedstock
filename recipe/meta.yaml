@@ -16,13 +16,14 @@ build:
 
 requirements:
   host:
-    - python >=3.8,<3.11
+    - python >=3.8,<3.12
     - pip
   run:
     - python >=3.8,<3.11
     - setuptools >=40.6.0
     - wheel
-    - cloudpickle >=1.6.0,<=2.0.0
+    - cloudpickle >=1.6.0,<=2.0.0  # [py<311]
+    - cloudpickle==2.2.1  # [py311]
     - snowflake-connector-python >=3.2.0,<4.0.0
     - typing-extensions >=4.1.0,<5.0.0
     - pyyaml
