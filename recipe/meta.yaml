@@ -22,7 +22,7 @@ requirements:
     - setuptools >=40.6.0
     - wheel
     - cloudpickle >=1.6.0,<=2.0.0  # [py<311]
-    - cloudpickle ==2.2.1  # [py==311]
+    - cloudpickle >=2.2.1,<3.0.0  # [py==311]
     - snowflake-connector-python >=3.2.0,<4.0.0
     - typing-extensions >=4.1.0,<5.0.0
     - pyyaml
