@@ -10,15 +10,16 @@ source:
   sha256: 7a5a7d901b6289c3203a66209cac3046e561191ffa0048f3e64272459507c9da
 
 build:
+  skip: true # [py<38 or py>3.11]
   script: {{ PYTHON }} -m pip install . -vv
   number: 0
 
 requirements:
   host:
-    - python >=3.8,<3.12
+    - python
     - pip
   run:
-    - python >=3.8,<3.11
+    - python
     - setuptools >=40.6.0
     - wheel
     - cloudpickle >=1.6.0,<=2.0.0  # [py<311]
