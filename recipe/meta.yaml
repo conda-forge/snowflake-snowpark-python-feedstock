@@ -1,5 +1,5 @@
 {% set name = "snowflake-snowpark-python" %}
-{% set version = "1.11.1" %}
+{% set version = "1.12.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/snowflake-snowpark-python-{{ version }}.tar.gz
-  sha256: 1f03cb546cc750267036ee1986854075fd83349c63461aa01bf1bc4a7155be01
+  sha256: 64e4f478e4327635aa6514434a6e55e01466ad33e2b431f7e06956b735387a62
 
 build:
   skip: true  # [py<38 or py>311]
@@ -24,7 +24,7 @@ requirements:
     - wheel
     - cloudpickle >=1.6.0,<=2.2.1,!=2.1.0,!=2.2.0  # [py<311]
     - cloudpickle >=2.2.1,<3.0.0  # [py==311]
-    - snowflake-connector-python >=3.4.0,<4.0.0
+    - snowflake-connector-python >=3.6.0,<4.0.0
     - typing-extensions >=4.1.0,<5.0.0
     - pyyaml
 
