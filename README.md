@@ -267,4 +267,5 @@ Feedstock Maintainers
 * [@sfc-gh-aling](https://github.com/sfc-gh-aling/)
 * [@sfc-gh-mkeller](https://github.com/sfc-gh-mkeller/)
 * [@sfc-gh-yixie](https://github.com/sfc-gh-yixie/)
+* [@sfc-gh-yuwang](https://github.com/sfc-gh-yuwang/)
 
