@@ -1,5 +1,5 @@
 {% set name = "snowflake-snowpark-python" %}
-{% set version = "1.24.0" %}
+{% set version = "1.25.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: cd8bae93f08f210b57b6ce9c12bca251dd062de57031a496411ac5bfd7fa1105
+  sha256: 184b9f6873b4c318af2727c707000998c9f6e24542036e536d86c2e314549e47
 
 build:
   skip: true  # [py<38 or py>311]
