@@ -24,8 +24,8 @@ requirements:
     - setuptools >=40.6.0
     - wheel
     # Snowpark IR
-    - protobuf==3.20.1  # [py<=310]
-    - protobuf==4.25.3  # [py>310]
+    - protobuf ==3.20.1  # [py<=310]
+    - protobuf ==4.25.3  # [py>310]
     - mypy-protobuf
   run:
     - python
