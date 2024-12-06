@@ -1,13 +1,13 @@
 {% set name = "snowflake-snowpark-python" %}
-{% set version = "1.25.0" %}
+{% set version = "1.26.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 184b9f6873b4c318af2727c707000998c9f6e24542036e536d86c2e314549e47
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: da982696597057fae66a76ebea8b7a9bc8d05a5f402eba0cbd6c3a8267457208
 
 build:
   skip: true  # [py<38 or py>311]
@@ -31,12 +31,12 @@ requirements:
     - python
     - setuptools >=40.6.0
     - wheel
-    - cloudpickle >=1.6.0,<=2.2.1,!=2.1.0,!=2.2.0  # [py<311]
-    - cloudpickle >=2.2.1,<3.0.0  # [py==311]
+    - cloudpickle >=1.6.0,<=2.2.1,!=2.1.0,!=2.2.0
     - snowflake-connector-python >=3.12.0,<4.0.0
     - typing-extensions >=4.1.0,<5.0.0
     - pyyaml
     - protobuf >=3.20,<6
+    - python-dateutil
     - tzlocal
 
 test:
