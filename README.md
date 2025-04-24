@@ -287,6 +287,7 @@ Feedstock Maintainers
 * [@sfc-gh-achandrasekaran](https://github.com/sfc-gh-achandrasekaran/)
 * [@sfc-gh-aling](https://github.com/sfc-gh-aling/)
 * [@sfc-gh-jdu](https://github.com/sfc-gh-jdu/)
+* [@sfc-gh-lmukhopadhyay](https://github.com/sfc-gh-lmukhopadhyay/)
 * [@sfc-gh-mkeller](https://github.com/sfc-gh-mkeller/)
 * [@sfc-gh-nkumar](https://github.com/sfc-gh-nkumar/)
 * [@sfc-gh-yixie](https://github.com/sfc-gh-yixie/)
