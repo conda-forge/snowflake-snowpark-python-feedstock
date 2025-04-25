@@ -1,5 +1,5 @@
 {% set name = "snowflake-snowpark-python" %}
-{% set version = "1.30.0" %}
+{% set version = "1.31.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 44bfe0bbb99150cbe46037793f5e2938acfe130aa88a51a845c2306dc732662a
+  sha256: 3787930a1b3037a6c2d45a7b512c3852506f766936b0399132dc28d4a47a42ba
 
 build:
   skip: true  # [py<38 or py>311]
@@ -38,6 +38,9 @@ requirements:
     - protobuf >=3.20,<6
     - python-dateutil
     - tzlocal
+  run_constrained:
+    # Snowpark pandas
+    - modin ==0.32.0
 
 test:
   imports:
