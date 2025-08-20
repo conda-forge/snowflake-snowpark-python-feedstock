@@ -35,12 +35,12 @@ requirements:
     - snowflake-connector-python >=3.14.0,<4.0.0
     - typing-extensions >=4.1.0,<5.0.0
     - pyyaml
-    - protobuf >=3.20,<6
+    - protobuf >=3.20,<6.32
     - python-dateutil
     - tzlocal
   run_constrained:
     # Snowpark pandas
-    - modin ==0.32.0
+    - modin >=0.34.0,<0.36.0
 
 test:
   imports:
