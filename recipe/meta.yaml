@@ -1,5 +1,5 @@
 {% set name = "snowflake-snowpark-python" %}
-{% set version = "1.36.0" %}
+{% set version = "1.37.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: defcf643905573857772f97f66c8193c20d5ec9089d46a1efdb1cc2f38d75885
+  sha256: 5e3138a1bf0caccb069ec92fd3b1b83971bd7c7bba54f15eaf5d7cfe55a516d9
 
 build:
   skip: true  # [py<38 or py>313]
@@ -35,12 +35,12 @@ requirements:
     - snowflake-connector-python >=3.14.0,<4.0.0
     - typing-extensions >=4.1.0,<5.0.0
     - pyyaml
-    - protobuf >=3.20,<6
+    - protobuf >=3.20,<6.32
     - python-dateutil
     - tzlocal
   run_constrained:
     # Snowpark pandas
-    - modin ==0.32.0
+    - modin >=0.34.0,<0.36.0
 
 test:
   imports:
