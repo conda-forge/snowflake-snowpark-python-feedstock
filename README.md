@@ -335,6 +335,3 @@ Feedstock Maintainers
 * [@sfc-gh-yixie](https://github.com/sfc-gh-yixie/)
 * [@sfc-gh-yuwang](https://github.com/sfc-gh-yuwang/)
 
-
-<!-- dummy commit to enable rerendering -->
-
