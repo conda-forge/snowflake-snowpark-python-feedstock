@@ -60,6 +60,7 @@ about:
 
 extra:
   recipe-maintainers:
+    - sfc-gh-joshi
     - sfc-gh-jrose
     - sfc-gh-lmukhopadhyay
     - sfc-gh-nkumar
