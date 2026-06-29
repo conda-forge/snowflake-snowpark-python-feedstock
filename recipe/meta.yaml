@@ -11,10 +11,8 @@ source:
 
 build:
   skip: true  # [py<38 or py>314]
-  script:
-    - {{ PYTHON }} -m pip install . --no-build-isolation -vv  # [py>=314]
-    - {{ PYTHON }} -m pip install . -vv                        # [py<314]
-  number: 1
+  script: {{ PYTHON }} -m pip install . -vv
+  number: 2
 
 requirements:
   build:
@@ -28,12 +26,15 @@ requirements:
     # Snowpark IR
     - protobuf ==3.20.1  # [py<=310]
     - protobuf ==4.25.3  # [py>310 and py<314]
-    - protobuf >=6.31    # [py>=314]
-    # mypy-protobuf 3.7.0 requires protobuf >= 5.26
+    - protobuf >=6.31,<7  # [py>=314]
+    # mypy-protobuf 3.7.0 requires protobuf >= 5.26; <=3.6.0 has no runtime-version check
+    # in its pb2 files so it is safe alongside any protobuf major version in the host env.
     - mypy-protobuf <=3.6.0
-    # py314: --no-build-isolation bypasses protoc-wheel-0 (no cp314 wheel on PyPI);
-    # libprotobuf provides the protoc binary directly from conda-forge
-    - libprotobuf  # [py>=314]
+    # py314: protoc-wheel-0 has no cp314 wheel on PyPI, so pip's build-isolation venv has
+    # no protoc binary; setup.py falls back to shutil.which("protoc") from PATH.
+    # Pin <7 so the conda-forge solve picks libprotobuf 6.x, keeping the same major version
+    # as pyarrow's arrow-cpp (libprotobuf 6.33.x) and avoiding a libprotobuf 7 vs 6 conflict.
+    - libprotobuf >=6.31,<7  # [py>=314]
   run:
     - python
     - setuptools >=40.6.0
@@ -43,7 +44,7 @@ requirements:
     - typing-extensions >=4.1.0,<5.0.0
     - pyyaml
     - protobuf >=3.20,<6.34  # [py<314]
-    - protobuf >=7.35        # [py>=314]
+    - protobuf >=6.31,<7     # [py>=314]
     - python-dateutil
     - tzlocal
   run_constrained:
@@ -55,10 +56,7 @@ test:
     - snowflake.snowpark
     - snowflake.snowpark._internal
   commands:
-    # pip check fails for py314 because upstream pyproject.toml caps protobuf at <6.34,
-    # but only protobuf >=7.x has cp314 builds on conda-forge. The package imports and
-    # runs correctly; skip until upstream broadens the constraint for py314.
-    - pip check  # [py<314]
+    - pip check
   requires:
     - pip
 
