@@ -242,13 +242,11 @@ Feedstock Maintainers
 * [@sfc-gh-jdu](https://github.com/sfc-gh-jdu/)
 * [@sfc-gh-joshi](https://github.com/sfc-gh-joshi/)
 * [@sfc-gh-jrose](https://github.com/sfc-gh-jrose/)
+* [@sfc-gh-jzeng](https://github.com/sfc-gh-jzeng/)
 * [@sfc-gh-lmukhopadhyay](https://github.com/sfc-gh-lmukhopadhyay/)
 * [@sfc-gh-mayliu](https://github.com/sfc-gh-mayliu/)
 * [@sfc-gh-mkeller](https://github.com/sfc-gh-mkeller/)
 * [@sfc-gh-nkumar](https://github.com/sfc-gh-nkumar/)
 * [@sfc-gh-yixie](https://github.com/sfc-gh-yixie/)
 * [@sfc-gh-yuwang](https://github.com/sfc-gh-yuwang/)
-
-
-<!-- dummy commit to enable rerendering -->
 
